@@ -4,6 +4,8 @@ import { REST, Routes, SlashCommandBuilder } from "discord.js";
 const command = new SlashCommandBuilder()
   .setName("robos")
   .setDescription("Publica cinco entornos de roleplay")
+  .setIntegrationTypes(0, 1)
+  .setContexts(0, 1, 2)
   .addIntegerOption(option =>
     option
       .setName("cantidad")
