@@ -70,7 +70,9 @@ const command = new SlashCommandBuilder()
       .setRequired(true)
       .addChoices(
         { name: "Bajo calibre", value: "BAJO CALIBRE" },
+        { name: "Medio/Bajo calibre", value: "MEDIO/BAJO CALIBRE" },
         { name: "Medio calibre", value: "MEDIO CALIBRE" },
+        { name: "Alto/Bajo calibre", value: "ALTO/BAJO CALIBRE" },
         { name: "Alto calibre", value: "ALTO CALIBRE" }
       )
   )
