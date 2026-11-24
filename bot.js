@@ -38,20 +38,11 @@ client.on(Events.InteractionCreate, async interaction => {
       `**HUIDA**\n entorno ${saludo} Se verian [${cantidad}] sujetos con vestimenta color [${color}], enmarcarados [${casco}], abordando un [${vehiculo}] portando [${armamento}], huyendo del lugar tras haber robado [${lugar}] dada la nula presencia policial.`
     ];
 
-    // Primer entorno como respuesta inicial
+  try {
     await interaction.reply({
-      content: entornos[0],
+      content: entornos.join("\n\n"),
       allowedMentions: { parse: [] }
     });
-
-    // Los cuatro restantes como respuestas adicionales
-    for (const entorno of entornos.slice(1)) {
-      await interaction.followUp({
-        content: entorno,
-        allowedMentions: { parse: [] }
-      });
-    }
-
   } catch (error) {
     console.error("Error ejecutando /robos:", error);
 
