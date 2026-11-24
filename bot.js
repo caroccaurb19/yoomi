@@ -1,4 +1,3 @@
-
 import "dotenv/config";
 import { Client, Events, GatewayIntentBits } from "discord.js";
 
@@ -27,28 +26,27 @@ client.on(Events.InteractionCreate, async interaction => {
     const saludo = `¿Aló ${jurisdiccion}?`;
 
     const entornos = [
-      `**SECUESTRANDO**\n entorno ${saludo} Se verian [${cantidad}] sujetos con vestimentas de color [${color}], enmarcarados [${casco}], portando armamento de [${armamento}], al parecer estarían secuestrando civiles para realizar un robo a [${lugar}] y se movilizan en un [${vehiculo}], ¡Ayuda!`,
+      `**SECUESTRANDO**\nEntorno ${saludo} Se verían [${cantidad}] sujetos con vestimentas de color [${color}], enmascarados [${casco}], portando armamento de [${armamento}]; al parecer estarían secuestrando civiles para realizar un robo a [${lugar}] y se movilizan en un [${vehiculo}], ¡Ayuda!`,
 
-      `**ROBANDO**\n entorno ${saludo} Se verian [${cantidad}] sujetos con vestimentas de color [${color}], enmarcarados [${casco}], portando armamento de [${armamento}], al parecer estarían robando [${lugar}] [tendrían ${rehenes} rehenes] y se movilizan en un [${vehiculo}], ¡Ayuda!`,
+      `**ROBANDO**\nEntorno ${saludo} Se verían [${cantidad}] sujetos con vestimentas de color [${color}], enmascarados [${casco}], portando armamento de [${armamento}]; al parecer estarían robando [${lugar}] [tendrían ${rehenes} rehenes] y se movilizan en un [${vehiculo}], ¡Ayuda!`,
 
-      `**PINCHANDO**\n entorno ${saludo} Se verian [${cantidad}] sujetos con vestimentas de color [${color}], enmarcarados [${casco}], portando armamento de [${armamento}], al parecer estarían [PINCHANDO RUEDAS A OFICIALES] y se movilizan en un [${vehiculo}], ¡Ayuda!`,
+      `**PINCHANDO**\nEntorno ${saludo} Se verían [${cantidad}] sujetos con vestimentas de color [${color}], enmascarados [${casco}], portando armamento de [${armamento}]; al parecer estarían [PINCHANDO RUEDAS A OFICIALES] y se movilizan en un [${vehiculo}], ¡Ayuda!`,
 
-      `**ABATIENDO**\n entorno ${saludo} Se verian [${cantidad}] sujetos con vestimentas de color [${color}], enmarcarados [${casco}], portando armamento de [${armamento}], al parecer estarían [ABATIENDO A OFICIALES] y se movilizan en un [${vehiculo}], ¡Ayuda!`,
+      `**ABATIENDO**\nEntorno ${saludo} Se verían [${cantidad}] sujetos con vestimentas de color [${color}], enmascarados [${casco}], portando armamento de [${armamento}]; al parecer estarían [ABATIENDO A OFICIALES] y se movilizan en un [${vehiculo}], ¡Ayuda!`,
 
-      `**HUIDA**\n entorno ${saludo} Se verian [${cantidad}] sujetos con vestimenta color [${color}], enmarcarados [${casco}], abordando un [${vehiculo}] portando [${armamento}], huyendo del lugar tras haber robado [${lugar}] dada la nula presencia policial.`
+      `**HUIDA**\nEntorno ${saludo} Se verían [${cantidad}] sujetos con vestimenta color [${color}], enmascarados [${casco}], abordando un [${vehiculo}] y portando [${armamento}], huyendo del lugar tras haber robado [${lugar}] dada la nula presencia policial.`,
     ];
 
-  try {
     await interaction.reply({
       content: entornos.join("\n\n"),
-      allowedMentions: { parse: [] }
+      allowedMentions: { parse: [] },
     });
   } catch (error) {
     console.error("Error ejecutando /robos:", error);
 
     const mensaje = {
       content: "Ocurrió un error al generar los entornos. Revisa los registros del bot.",
-      ephemeral: true
+      ephemeral: true,
     };
 
     if (interaction.replied || interaction.deferred) {
