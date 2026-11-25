@@ -66,13 +66,7 @@ client.on(Events.InteractionCreate, async interaction => {
         `vestidos de color [${color}] [${casco}], `;
 
       const mensaje = [
-        `**SECUESTRANDO**\n` +
-        `Entorno ¿Aló ${jurisdiccion}? Soy Barack Obama. Estaba revisando meticulosamente cada palabra de un discurso ` +
-        `politico importante, considerando el impacto de mis palabras en millones de personas en todo el mundo, ` +
-        `cuando de repente fui interrumpido por un asesor con una expresion preocupada en su rostro, ` +
-        `al acercarme vi a [${cantidad}] sujetos enmascarados ` +
-        `vestidos de color [${color}] [${casco}], portando armamento ` +
-        `de [${armamento}]. Los cuales estarían secuestrando a [${cantidad2}] [${secuestro}] , ` +
+        `**SECUESTRANDO**\n${inicio2}, portando armamento de [${armamento}]. Los cuales estarían secuestrando a [${cantidad2}] [${secuestrados}] , ` +
         `estos se movilizan en [${vehiculo}], ¡Estos se ven muy peligrosos por favor asistir rapido al llamado!`,
         `**PINCHANDO RUEDAS**\n${inicio2}, movilizandose en [${vehiculo}], estos estarian [PINCHANDO RUEDAS A ${secuestrados}] ¡Ayuda por favor!`,
         `**ABATIENDO**\n${inicio2}, movilizandose en [${vehiculo}], estos estarian [ABATIENDO A ${secuestrados}] ¡Ayuda por favor!`, ];
