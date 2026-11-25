@@ -58,7 +58,7 @@ client.on(Events.InteractionCreate, async interaction => {
       const casco = interaction.options.getString("casco", true);
       const vehiculo = interaction.options.getString("vehiculo", true);
       const armamento = interaction.options.getString("armamento", true);
-      const secuestrados = interaction.options.getString("secuestro", true);
+      const secuestrados = interaction.options.getString("secuestrados", true);
       const jurisdiccion = interaction.options.getString("jurisdiccion", true);
 
       const inicio2 =
