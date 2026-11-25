@@ -228,7 +228,7 @@ const rest = new REST({ version: "10" }).setToken(process.env.BOT_TOKEN);
 
 await rest.put(
   Routes.applicationCommands(process.env.APP_ID),
-  { body: [command.toJSON(), zrCommand.toJSON()] }
+  { body: [command.toJSON(), zrCommand.toJSON(), secuestroCommand.toJSON()] }
 );
 
 console.log("Comando /robos registrado globalmente.");
