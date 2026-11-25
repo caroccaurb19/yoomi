@@ -190,8 +190,8 @@ const secuestroCommand = new SlashCommandBuilder()
       .setRequired(true)
       .addChoices(
         { name: "Secuestro a Civiles", value: "CIVIL(es)" },
-        { name: "Secuestro a LSPD", value: "Un LSPD(s)" },
-        { name: "Secuestro a Sheriff", value: "Un Sheriff(s)" }
+        { name: "Secuestro a LSPD", value: "LSPD(s)" },
+        { name: "Secuestro a Sheriff", value: "Sheriff(s)" }
       )
   )
   .addStringOption(option =>
