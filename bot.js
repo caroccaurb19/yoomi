@@ -11,6 +11,45 @@ client.once(Events.ClientReady, bot => {
 
 client.on(Events.InteractionCreate, async interaction => {
   if (!interaction.isChatInputCommand()) return;
+    if (interaction.commandName === "zr") {
+    try {
+      const cantidad = interaction.options.getInteger("cantidad", true);
+      const color = interaction.options.getString("color", true);
+      const casco = interaction.options.getString("casco", true);
+      const vehiculo = interaction.options.getString("vehiculo", true);
+      const armamento = interaction.options.getString("armamento", true);
+      const jurisdiccion = interaction.options.getString("jurisdiccion", true);
+
+      const inicio =
+        `Entorno ¿Aló ${jurisdiccion}? Se visualizan [${cantidad}] sujetos ` +
+        `con vestimentas de color [${color}], [${casco}], ` +
+        `portando armamento de [${armamento}]`;
+
+      const entornosZR = [
+        `**ENTRANDO**\n${inicio}, entrando a la zona roja en un [${vehiculo}], ¡Ayuda!`,
+        `**RECOLECTANDO**\n${inicio}, recolectando en la zona roja en un [${vehiculo}], ¡Ayuda!`,
+        `**PROCESANDO**\n${inicio}, procesando en la zona roja en un [${vehiculo}], ¡Ayuda!`,
+        `**SALIENDO**\n${inicio}, saliendo de la zona roja en un [${vehiculo}], ¡Ayuda!`,
+      ];
+
+      await interaction.reply({
+        content: entornosZR.join("\n\n"),
+        allowedMentions: { parse: [] },
+      });
+    } catch (error) {
+      console.error("Error ejecutando /zr:", error);
+
+      if (!interaction.replied && !interaction.deferred) {
+        await interaction.reply({
+          content: "Ocurrió un error al generar los entornos de zona roja.",
+          ephemeral: true,
+        }).catch(console.error);
+      }
+    }
+
+    return;
+  }
+  
   if (interaction.commandName !== "robos") return;
 
   try {
