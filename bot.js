@@ -68,7 +68,7 @@ client.on(Events.InteractionCreate, async interaction => {
         `al acercarme vi a [${cantidad}] sujetos enmascarados ` +
         `vestidos de color [${color}] [${casco}], portando armamento ` +
         `de [${armamento}]. Los cuales estarían secuestrando a [${oficiales}] oficiales, ` +
-        `estos se movilizan en un [${vehiculo}], ¡Estos son muy peligrosos por favor asistir rapido al llamado!`;
+        `estos se movilizan en [${vehiculo}], ¡Estos son muy peligrosos por favor asistir rapido al llamado!`;
 
       await interaction.reply({
         content: mensaje,
