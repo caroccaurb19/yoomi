@@ -50,7 +50,7 @@ client.on(Events.InteractionCreate, async interaction => {
     return;
   }
 
-    if (interaction.commandName === "secuestro-policias") {
+    if (interaction.commandName === "secuestro") {
     try {
       const cantidad = interaction.options.getInteger("cantidad", true);
       const oficiales = interaction.options.getInteger("oficiales", true);
