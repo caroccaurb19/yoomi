@@ -53,12 +53,12 @@ client.on(Events.InteractionCreate, async interaction => {
     if (interaction.commandName === "secuestro") {
     try {
       const cantidad = interaction.options.getInteger("cantidad", true);
-      const oficiales = interaction.options.getInteger("oficiales", true);
+      const cantidad2 = interaction.options.getInteger("cantidad2", true);
       const color = interaction.options.getString("color", true);
       const casco = interaction.options.getString("casco", true);
       const vehiculo = interaction.options.getString("vehiculo", true);
       const armamento = interaction.options.getString("armamento", true);
-      const secuestro = interaction.options.getString("secuestro", true);
+      const secuestrados = interaction.options.getString("secuestro", true);
       const jurisdiccion = interaction.options.getString("jurisdiccion", true);
 
       const inicio2 =
@@ -74,15 +74,15 @@ client.on(Events.InteractionCreate, async interaction => {
         `vestidos de color [${color}] [${casco}], portando armamento ` +
         `de [${armamento}]. Los cuales estarían secuestrando a [${cantidad2}] [${secuestro}] , ` +
         `estos se movilizan en [${vehiculo}], ¡Estos se ven muy peligrosos por favor asistir rapido al llamado!`,
-        `**PINCHANDO RUEDAS**\n${inicio2}, movilizandose en [${vehiculo}], estos estarian [PINCHANDO RUEDAS A ${secuestro}] ¡Ayuda por favor!`,
-        `**ABATIENDO**\n${inicio2}, movilizandose en [${vehiculo}], estos estarian [ABATIENDO A ${secuestro}] ¡Ayuda por favor!`, ];
+        `**PINCHANDO RUEDAS**\n${inicio2}, movilizandose en [${vehiculo}], estos estarian [PINCHANDO RUEDAS A ${secuestrados}] ¡Ayuda por favor!`,
+        `**ABATIENDO**\n${inicio2}, movilizandose en [${vehiculo}], estos estarian [ABATIENDO A ${secuestrados}] ¡Ayuda por favor!`, ];
       
        await interaction.reply({
         content: mensaje.join("\n\n"),
         allowedMentions: { parse: [] },
       });
     } catch (error) {
-      console.error("Error ejecutando /secuestro-policias:", error);
+      console.error("Error ejecutando /secuestro:", error);
 
       if (!interaction.replied && !interaction.deferred) {
         await interaction.reply({
