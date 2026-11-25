@@ -185,6 +185,19 @@ const secuestroCommand = new SlashCommandBuilder()
   )
   .addStringOption(option =>
     option
+      .setName("secuestro")
+      .setDescription("Elige a quien quieres secuestrar")
+      .setRequired(true)
+      .addChoices(
+        { name: "Secuestro a Civiles", value: "SECUESTRO A CIVILES" },
+        { name: "Secuestro a LSPD", value: "SECUESTRO A LSPD" },
+        { name: "Secuestro a Sheriff", value: "SECUESTRO A SHERIFF" },
+        { name: "Secuestro a Marshall", value: "SECUESTRO A MARSHALL" },
+        { name: "Secuestro a FIB", value: "SECUESTRO A FIB" }
+      )
+  )
+  .addStringOption(option =>
+    option
       .setName("casco")
       .setDescription("Indica si llevan casco")
       .setRequired(true)
