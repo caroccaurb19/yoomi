@@ -66,10 +66,10 @@ client.on(Events.InteractionCreate, async interaction => {
         `vestidos de color [${color}] [${casco}], `;
 
       const mensaje = [
-        `**SECUESTRANDO**\n${inicio2}, portando armamento de [${armamento}]. Los cuales estarían secuestrando a [${cantidad2}] [${secuestrados}] , ` +
+        `**SECUESTRANDO**\n${inicio2} portando armamento de [${armamento}]. Los cuales estarían secuestrando a [${cantidad2}] [${secuestrados}] , ` +
         `estos se movilizan en [${vehiculo}], ¡Estos se ven muy peligrosos por favor asistir rapido al llamado!`,
-        `**PINCHANDO RUEDAS**\n${inicio2}, movilizandose en [${vehiculo}], estos estarian [PINCHANDO RUEDAS A ${secuestrados}] ¡Ayuda por favor!`,
-        `**ABATIENDO**\n${inicio2}, movilizandose en [${vehiculo}], estos estarian [ABATIENDO A ${secuestrados}] ¡Ayuda por favor!`, ];
+        `**PINCHANDO RUEDAS**\n${inicio2} movilizandose en [${vehiculo}], estos estarian [PINCHANDO RUEDAS A ${secuestrados}] ¡Ayuda por favor!`,
+        `**ABATIENDO**\n${inicio2} movilizandose en [${vehiculo}], estos estarian [ABATIENDO A ${secuestrados}] ¡Ayuda por favor!`, ];
       
        await interaction.reply({
         content: mensaje.join("\n\n"),
