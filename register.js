@@ -185,7 +185,7 @@ const secuestroCommand = new SlashCommandBuilder()
   )
   .addStringOption(option =>
     option
-      .setName("secuestro")
+      .setName("secuestrados")
       .setDescription("Elige a quien quieres secuestrar")
       .setRequired(true)
       .addChoices(
