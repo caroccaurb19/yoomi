@@ -26,10 +26,10 @@ client.on(Events.InteractionCreate, async interaction => {
         `portando armamento de [${armamento}]`;
 
       const entornosZR = [
-        `**ENTRANDO**\n${inicio}, entrando a una zona roja en un [${vehiculo}], ¡Ayuda!`,
-        `**RECOLECTANDO**\n${inicio}, recolectando drogas en una zona roja, estos se movilizan en un [${vehiculo}], ¡Ayuda!`,
-        `**PROCESANDO**\n${inicio}, procesando drogas en una zona roja, estos se movilizan en un [${vehiculo}], ¡Ayuda!`,
-        `**SALIENDO**\n${inicio}, saliendo de una zona roja, estos se movilizan en un [${vehiculo}], ¡Ayuda!`,
+        `**ENTRANDO**\n${inicio}, entrando a una zona roja en [${vehiculo}], ¡Ayuda!`,
+        `**RECOLECTANDO**\n${inicio}, recolectando drogas en una zona roja, estos se movilizan en [${vehiculo}], ¡Ayuda!`,
+        `**PROCESANDO**\n${inicio}, procesando drogas en una zona roja, estos se movilizan en [${vehiculo}], ¡Ayuda!`,
+        `**SALIENDO**\n${inicio}, saliendo de una zona roja, estos se movilizan en [${vehiculo}], ¡Ayuda!`,
       ];
 
       await interaction.reply({
