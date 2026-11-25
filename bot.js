@@ -64,7 +64,7 @@ client.on(Events.InteractionCreate, async interaction => {
         `Entorno ¿Aló ${jurisdiccion}? veo a [${cantidad}] sujetos enmascarados ` +
         `vestidos de color [${color}] [${casco}], `;
 
-      const mensaje =
+      const mensaje = [
         `**SECUESTRANDO**\n` +
         `Entorno ¿Aló ${jurisdiccion}? Soy Barack Obama. Estaba revisando meticulosamente cada palabra de un discurso ` +
         `politico importante, considerando el impacto de mis palabras en millones de personas en todo el mundo, ` +
@@ -74,10 +74,10 @@ client.on(Events.InteractionCreate, async interaction => {
         `de [${armamento}]. Los cuales estarían secuestrando a [${cantidad2}] [${secuestro}] , ` +
         `estos se movilizan en [${vehiculo}], ¡Estos se ven muy peligrosos por favor asistir rapido al llamado!`,
         `**PINCHANDO RUEDAS**\n${inicio2}, movilizandose en [${vehiculo}], estos estarian [PINCHANDO RUEDAS A ${secuestro}] ¡Ayuda por favor!`,
-        `**ABATIENDO**\n${inicio2}, movilizandose en [${vehiculo}], estos estarian [ABATIENDO A ${secuestro}] ¡Ayuda por favor!`;
-
-      await interaction.reply({
-        content: mensaje,
+        `**ABATIENDO**\n${inicio2}, movilizandose en [${vehiculo}], estos estarian [ABATIENDO A ${secuestro}] ¡Ayuda por favor!`, ];
+      
+       await interaction.reply({
+        content: mensaje.join("\n\n"),
         allowedMentions: { parse: [] },
       });
     } catch (error) {
