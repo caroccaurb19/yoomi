@@ -21,15 +21,15 @@ client.on(Events.InteractionCreate, async interaction => {
       const jurisdiccion = interaction.options.getString("jurisdiccion", true);
 
       const inicio =
-        `Entorno ¿Aló ${jurisdiccion}? Se visualizan [${cantidad}] sujetos ` +
-        `con vestimentas de color [${color}], [${casco}], ` +
+        `Entorno ¿Aló ${jurisdiccion}? Se visualizan [${cantidad}] sujetos enmascarados` +
+        `con vestimentas de color [${color}] [${casco}], ` +
         `portando armamento de [${armamento}]`;
 
       const entornosZR = [
-        `**ENTRANDO**\n${inicio}, entrando a la zona roja en un [${vehiculo}], ¡Ayuda!`,
-        `**RECOLECTANDO**\n${inicio}, recolectando en la zona roja en un [${vehiculo}], ¡Ayuda!`,
-        `**PROCESANDO**\n${inicio}, procesando en la zona roja en un [${vehiculo}], ¡Ayuda!`,
-        `**SALIENDO**\n${inicio}, saliendo de la zona roja en un [${vehiculo}], ¡Ayuda!`,
+        `**ENTRANDO**\n${inicio}, entrando a una zona roja en un [${vehiculo}], ¡Ayuda!`,
+        `**RECOLECTANDO**\n${inicio}, recolectando drogas en una zona roja, estos se movilizan en un [${vehiculo}], ¡Ayuda!`,
+        `**PROCESANDO**\n${inicio}, procesando drogas en una zona roja en un [${vehiculo}], ¡Ayuda!`,
+        `**SALIENDO**\n${inicio}, saliendo de una zona roja en un [${vehiculo}], ¡Ayuda!`,
       ];
 
       await interaction.reply({
