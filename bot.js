@@ -21,7 +21,7 @@ client.on(Events.InteractionCreate, async interaction => {
       const jurisdiccion = interaction.options.getString("jurisdiccion", true);
 
       const inicio =
-        `Entorno ¿Aló ${jurisdiccion}? Se visualizan [${cantidad}] sujetos enmascarados ` +
+        `Entorno ¿Aló ${jurisdiccion}? veo a [${cantidad}] sujetos enmascarados ` +
         `vestidos de color [${color}] [${casco}], ` +
         `portando armamento de [${armamento}]`;
 
@@ -60,15 +60,21 @@ client.on(Events.InteractionCreate, async interaction => {
       const armamento = interaction.options.getString("armamento", true);
       const jurisdiccion = interaction.options.getString("jurisdiccion", true);
 
+      const inicio2 =
+        `Entorno ¿Aló ${jurisdiccion}? veo a [${cantidad}] sujetos enmascarados ` +
+        `vestidos de color [${color}] [${casco}], `;
+
       const mensaje =
-        `**SECUESTRO DE OFICIALES**\n` +
+        `**SECUESTRANDO**\n` +
         `Entorno ¿Aló ${jurisdiccion}? Soy Barack Obama. Estaba revisando meticulosamente cada palabra de un discurso ` +
         `politico importante, considerando el impacto de mis palabras en millones de personas en todo el mundo, ` +
         `cuando de repente fui interrumpido por un asesor con una expresion preocupada en su rostro, ` +
         `al acercarme vi a [${cantidad}] sujetos enmascarados ` +
         `vestidos de color [${color}] [${casco}], portando armamento ` +
-        `de [${armamento}]. Los cuales estarían secuestrando a [${oficiales}] oficial(es), ` +
-        `estos se movilizan en [${vehiculo}], ¡Estos son muy peligrosos por favor asistir rapido al llamado!`;
+        `de [${armamento}]. Los cuales estarían secuestrando a [${cantidad2}] [${secuestro}] , ` +
+        `estos se movilizan en [${vehiculo}], ¡Estos se ven muy peligrosos por favor asistir rapido al llamado!`,
+        `**PINCHANDO RUEDAS**\n${inicio2}, movilizandose en [${vehiculo}], estos estarian [PINCHANDO RUEDAS A ${secuestro}] ¡Ayuda por favor!`,
+        `**ABATIENDO**\n${inicio2}, movilizandose en [${vehiculo}], estos estarian [ABATIENDO A ${secuestro}] ¡Ayuda por favor!`;
 
       await interaction.reply({
         content: mensaje,
