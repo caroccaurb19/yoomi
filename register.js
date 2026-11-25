@@ -170,8 +170,8 @@ const secuestroCommand = new SlashCommandBuilder()
   )
   .addIntegerOption(option =>
     option
-      .setName("oficiales")
-      .setDescription("Cantidad de oficiales secuestrados")
+      .setName("cantidad2")
+      .setDescription("Cantidad de secuestrados")
       .setMinValue(1)
       .setMaxValue(99)
       .setRequired(true)
