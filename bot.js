@@ -65,7 +65,7 @@ client.on(Events.InteractionCreate, async interaction => {
         `Entorno ¿Aló ${jurisdiccion}? Soy Barack Obama. Estaba revisando meticulosamente cada palabra de un discurso` +
         `politico importante, considerando el impacto de mis palabras en millones de personas en todo el mundo,` +
         `cuando de repente fui interrumpido por un asesor con una expresion preocupada en su rostro,` +
-        ,`al acercarme vi a [${cantidad}] sujetos enmascarados` +
+        `al acercarme vi a [${cantidad}] sujetos enmascarados` +
         `vestidos de color [${color}] [${casco}], portando armamento ` +
         `de [${armamento}]. Los cuales estarían secuestrando a [${oficiales}] oficiales, ` +
         `estos se movilizan en un [${vehiculo}], ¡Estos son muy peligrosos por favor asistir rapido al llamado!`;
