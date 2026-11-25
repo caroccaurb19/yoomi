@@ -49,6 +49,44 @@ client.on(Events.InteractionCreate, async interaction => {
 
     return;
   }
+
+    if (interaction.commandName === "secuestro-policias") {
+    try {
+      const cantidad = interaction.options.getInteger("cantidad", true);
+      const oficiales = interaction.options.getInteger("oficiales", true);
+      const color = interaction.options.getString("color", true);
+      const casco = interaction.options.getString("casco", true);
+      const vehiculo = interaction.options.getString("vehiculo", true);
+      const armamento = interaction.options.getString("armamento", true);
+      const jurisdiccion = interaction.options.getString("jurisdiccion", true);
+
+      const mensaje =
+        `**SECUESTRO DE OFICIALES**\n` +
+        `Entorno ¿Aló ${jurisdiccion}? Soy Barack Obama. Estaba revisando meticulosamente cada palabra de un discurso` +
+        `politico importante, considerando el impacto de mis palabras en millones de personas en todo el mundo,` +
+        `cuando de repente fui interrumpido por un asesor con una expresion preocupada en su rostro,` +
+        ,`al acercarme vi a [${cantidad}] sujetos enmascarados` +
+        `vestidos de color [${color}] [${casco}], portando armamento ` +
+        `de [${armamento}]. Los cuales estarían secuestrando a [${oficiales}] oficiales, ` +
+        `estos se movilizan en un [${vehiculo}], ¡Estos son muy peligrosos por favor asistir rapido al llamado!`;
+
+      await interaction.reply({
+        content: mensaje,
+        allowedMentions: { parse: [] },
+      });
+    } catch (error) {
+      console.error("Error ejecutando /secuestro-policias:", error);
+
+      if (!interaction.replied && !interaction.deferred) {
+        await interaction.reply({
+          content: "Ocurrió un error al generar el entorno.",
+          ephemeral: true,
+        }).catch(console.error);
+      }
+    }
+
+    return;
+  }
   
   if (interaction.commandName !== "robos") return;
 
