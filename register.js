@@ -48,12 +48,17 @@ const command = new SlashCommandBuilder()
         { name: "Banco Fleeca", value: "Banco Fleeca" },
         { name: "Joyería", value: "Joyería" },
         { name: "Robo a Yate", value: "Robo a Yate" },
+        { name: "Robo a Metro", value: "Robo a Metro" },
         { name: "Life invader", value: "Life invader" },
         { name: "Banco de Paleto", value: "Banco de Paleto" },
         { name: "Secuestro a LSPD/Sheriff", value: "Secuestro a LSPD/Sheriff" },
         { name: "Asalto a porta aviones", value: "Asalto a porta aviones" },
         { name: "Banco Central", value: "Banco Central" },
-        { name: "Laboratorio Humane", value: "Laboratorio Humane" }
+        { name: "Polleria", value: "Polleria" },
+        { name: "Parquimetro", value: "Parquimetro" },
+        { name: "BADULAQUE 24/7", value: "BADULAQUE 24/7" },
+        { name: "Laboratorio Humane", value: "Laboratorio Humane" },
+        { name: "DIAMOND CASINO", value: "DIAMOND CASINO" }
       )
   )
   .addStringOption(option =>
